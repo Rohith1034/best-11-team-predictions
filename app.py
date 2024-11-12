@@ -1,12 +1,6 @@
 import pandas as pd
 import numpy as np
 from flask import Flask, request, jsonify
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, LabelEncoder
-
-# Load your data
-# data = pd.read_csv("ball_by_ball_ipl.csv")
 
 # Define Flask app
 app = Flask(__name__)
@@ -14,8 +8,9 @@ app = Flask(__name__)
 # Route for root URL
 @app.route('/')
 def hello_world():
-    return "Hello, World!"
+    return "<h1>Hello, World!</h1>"
 
+# Your existing function for getting top 11 players
 def get_top_11_players(venue, opposition_team):
     filtered_data = data[(data['Venue'] == venue) & (data['Bat Second'] == opposition_team)]
     
