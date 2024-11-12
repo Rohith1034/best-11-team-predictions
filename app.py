@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 # Load your data
-data = pd.read_csv("ball_by_ball_ipl.csv")
+#data = pd.read_csv("ball_by_ball_ipl.csv")
 
 # Define Flask app
 app = Flask(__name__)
